@@ -1,4 +1,10 @@
+"use client";
+
+import { useLanguage } from "@/lib/i18n";
+
 export function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto">
@@ -7,22 +13,22 @@ export function Hero() {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-[#008C42]/10 text-[#008C42] px-4 py-2 rounded-full text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-[#008C42] rounded-full animate-pulse"></span>
-              AI動画スカウトサービス
+              {t.hero.badge}
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-              候補者に
+              {t.hero.title.line1}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008C42] to-[#123B35]">
-                響く動画
+                {t.hero.title.highlight}
               </span>
-              を
+              {t.hero.title.line2}
               <br />
-              AIが自動生成
+              {t.hero.title.line3}
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              履歴書をアップロードするだけで、候補者一人ひとりにパーソナライズされたスカウト動画をAIが自動作成。
-              返信率を<span className="font-bold text-[#008C42]">3倍</span>に向上させます。
+              {t.hero.description}
+              <span className="font-bold text-[#008C42]">{t.hero.descriptionHighlight}</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -30,29 +36,29 @@ export function Hero() {
                 href="#contact"
                 className="bg-[#008C42] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#007538] transition-all hover:scale-105 shadow-lg shadow-[#008C42]/20"
               >
-                無料で試してみる
+                {t.hero.cta.primary}
               </a>
               <a
                 href="#how-it-works"
                 className="border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-medium text-lg hover:border-[#008C42]/30 hover:text-[#008C42] transition-colors"
               >
-                詳しく見る
+                {t.hero.cta.secondary}
               </a>
             </div>
 
             {/* Stats */}
             <div className="flex items-center justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-slate-100">
               <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900">3倍</div>
-                <div className="text-sm text-slate-500">返信率向上</div>
+                <div className="text-3xl font-bold text-slate-900">{t.hero.stats.responseRate.value}</div>
+                <div className="text-sm text-slate-500">{t.hero.stats.responseRate.label}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900">90%</div>
-                <div className="text-sm text-slate-500">工数削減</div>
+                <div className="text-3xl font-bold text-slate-900">{t.hero.stats.workReduction.value}</div>
+                <div className="text-sm text-slate-500">{t.hero.stats.workReduction.label}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900">30秒</div>
-                <div className="text-sm text-slate-500">動画生成</div>
+                <div className="text-3xl font-bold text-slate-900">{t.hero.stats.videoGeneration.value}</div>
+                <div className="text-sm text-slate-500">{t.hero.stats.videoGeneration.label}</div>
               </div>
             </div>
           </div>
@@ -70,8 +76,8 @@ export function Hero() {
                   </div>
                   {/* Video overlay text */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="text-sm opacity-80">AIが生成したスカウト動画</div>
-                    <div className="font-medium">山田太郎様へ</div>
+                    <div className="text-sm opacity-80">{t.hero.video.aiGenerated}</div>
+                    <div className="font-medium">{t.hero.video.recipient}</div>
                   </div>
                 </div>
                 <div className="p-4">
@@ -80,8 +86,8 @@ export function Hero() {
                       <span className="text-[#008C42] font-bold">A</span>
                     </div>
                     <div>
-                      <div className="font-medium text-slate-900">株式会社ABC</div>
-                      <div className="text-sm text-slate-500">採用担当</div>
+                      <div className="font-medium text-slate-900">{t.hero.video.company}</div>
+                      <div className="text-sm text-slate-500">{t.hero.video.recruiter}</div>
                     </div>
                   </div>
                 </div>
@@ -91,14 +97,14 @@ export function Hero() {
               <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-3 animate-float">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">✨</span>
-                  <span className="text-sm font-medium text-slate-700">AI生成中...</span>
+                  <span className="text-sm font-medium text-slate-700">{t.hero.floating.generating}</span>
                 </div>
               </div>
 
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-3 animate-float" style={{ animationDelay: "1s" }}>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">📧</span>
-                  <span className="text-sm font-medium text-[#008C42]">返信率 +200%</span>
+                  <span className="text-sm font-medium text-[#008C42]">{t.hero.floating.responseUp}</span>
                 </div>
               </div>
             </div>

@@ -1,4 +1,10 @@
+"use client";
+
+import { useLanguage } from "@/lib/i18n";
+
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -11,11 +17,10 @@ export function Footer() {
                 alt="Dale Logo"
                 className="h-10 w-auto opacity-90 invert"
               />
-              <span className="font-serif font-bold text-2xl">社長スタジオ</span>
+              <span className="font-serif font-bold text-2xl">{t.footer.brandName}</span>
             </div>
             <p className="text-slate-400 mb-6 max-w-md">
-              AIパーソナライズ動画スカウトサービス。
-              候補者一人ひとりに合わせたスカウト動画を自動生成し、採用の返信率を劇的に向上させます。
+              {t.footer.description}
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-[#008C42] transition-colors">
@@ -33,32 +38,32 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="font-bold mb-4">サービス</h4>
+            <h4 className="font-bold mb-4">{t.footer.service.title}</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><a href="#features" className="hover:text-[#008C42] transition-colors">機能紹介</a></li>
-              <li><a href="#how-it-works" className="hover:text-[#008C42] transition-colors">使い方</a></li>
-              <li><a href="#" className="hover:text-[#008C42] transition-colors">料金プラン</a></li>
-              <li><a href="#" className="hover:text-[#008C42] transition-colors">導入事例</a></li>
+              <li><a href="#features" className="hover:text-[#008C42] transition-colors">{t.footer.service.features}</a></li>
+              <li><a href="#how-it-works" className="hover:text-[#008C42] transition-colors">{t.footer.service.howItWorks}</a></li>
+              <li><a href="#" className="hover:text-[#008C42] transition-colors">{t.footer.service.pricing}</a></li>
+              <li><a href="#" className="hover:text-[#008C42] transition-colors">{t.footer.service.caseStudies}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4">会社情報</h4>
+            <h4 className="font-bold mb-4">{t.footer.company.title}</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><a href="#" className="hover:text-[#008C42] transition-colors">運営会社</a></li>
-              <li><a href="#" className="hover:text-[#008C42] transition-colors">プライバシーポリシー</a></li>
-              <li><a href="#" className="hover:text-[#008C42] transition-colors">利用規約</a></li>
-              <li><a href="#contact" className="hover:text-[#008C42] transition-colors">お問い合わせ</a></li>
+              <li><a href="#" className="hover:text-[#008C42] transition-colors">{t.footer.company.about}</a></li>
+              <li><a href="#" className="hover:text-[#008C42] transition-colors">{t.footer.company.privacy}</a></li>
+              <li><a href="#" className="hover:text-[#008C42] transition-colors">{t.footer.company.terms}</a></li>
+              <li><a href="#contact" className="hover:text-[#008C42] transition-colors">{t.footer.company.contact}</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © 2024 社長スタジオ. All rights reserved.
+            {t.footer.copyright}
           </p>
           <p className="text-slate-500 text-sm">
-            AIで採用を変える
+            {t.footer.tagline}
           </p>
         </div>
       </div>

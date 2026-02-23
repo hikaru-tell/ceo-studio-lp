@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Shippori_Mincho_B1 } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
+import { LanguageProvider } from "@/lib/i18n";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,13 +16,13 @@ const shippori = Shippori_Mincho_B1({
 });
 
 export const metadata: Metadata = {
-  title: "社長スタジオ | AIパーソナライズ動画スカウト",
+  title: "社長スタジオ | CEO Studio - AI Personalized Video Scout",
   description:
-    "候補者一人ひとりに合わせたスカウト動画をAIが自動生成。採用の返信率を劇的に向上させます。",
+    "AI automatically generates personalized scout videos for each candidate. Dramatically improve recruitment response rates.",
   openGraph: {
-    title: "社長スタジオ | AIパーソナライズ動画スカウト",
+    title: "社長スタジオ | CEO Studio - AI Personalized Video Scout",
     description:
-      "候補者一人ひとりに合わせたスカウト動画をAIが自動生成。採用の返信率を劇的に向上させます。",
+      "AI automatically generates personalized scout videos for each candidate. Dramatically improve recruitment response rates.",
     type: "website",
   },
 };
@@ -32,9 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <body className={`${inter.variable} ${shippori.variable} font-sans antialiased`}>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <ConvexClientProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   );

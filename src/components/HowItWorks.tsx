@@ -1,47 +1,22 @@
+"use client";
+
+import { useLanguage } from "@/lib/i18n";
+
 export function HowItWorks() {
-  const steps = [
-    {
-      number: "01",
-      title: "履歴書をアップロード",
-      description:
-        "候補者の履歴書（PDF/Word）をドラッグ&ドロップでアップロード。複数ファイルの一括処理も可能です。",
-      image: "📄",
-    },
-    {
-      number: "02",
-      title: "AIが分析・スクリプト生成",
-      description:
-        "GPT-4oが履歴書の内容を分析し、候補者のスキルや経験に合わせたパーソナライズされたスクリプトを生成します。",
-      image: "🤖",
-    },
-    {
-      number: "03",
-      title: "動画を自動生成",
-      description:
-        "最新のAI動画技術で、CEOアバターが候補者に語りかける高品質なスカウト動画を30秒で生成します。",
-      image: "🎬",
-    },
-    {
-      number: "04",
-      title: "ダウンロード・送信",
-      description:
-        "生成された動画をダウンロードし、スカウトメールに添付。または直接リンクを候補者に送信できます。",
-      image: "📧",
-    },
-  ];
+  const { t } = useLanguage();
 
   return (
     <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-[#008C42] font-medium text-sm uppercase tracking-wider">
-            使い方
+            {t.howItWorks.label}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-6">
-            4ステップで簡単スタート
+            {t.howItWorks.title}
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            複雑な設定は不要。履歴書をアップロードするだけで、すぐにパーソナライズ動画が完成します。
+            {t.howItWorks.description}
           </p>
         </div>
 
@@ -50,7 +25,7 @@ export function HowItWorks() {
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#008C42]/20 via-[#123B35]/20 to-[#008C42]/20 -translate-y-1/2 z-0"></div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
+            {t.howItWorks.steps.map((step, index) => (
               <div key={index} className="relative z-10">
                 <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow">
                   {/* Step Number */}
@@ -68,7 +43,7 @@ export function HowItWorks() {
                 </div>
 
                 {/* Arrow (hidden on last item) */}
-                {index < steps.length - 1 && (
+                {index < t.howItWorks.steps.length - 1 && (
                   <div className="hidden lg:flex absolute top-1/2 -right-4 -translate-y-1/2 z-20">
                     <svg className="w-8 h-8 text-[#008C42]/30" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
@@ -86,17 +61,17 @@ export function HowItWorks() {
             <div className="text-4xl">🎥</div>
             <div className="text-center sm:text-left">
               <div className="font-bold text-slate-900 text-lg">
-                実際の動画を見てみませんか？
+                {t.howItWorks.demo.title}
               </div>
               <div className="text-slate-600">
-                デモ動画で社長スタジオの実力をお確かめください
+                {t.howItWorks.demo.description}
               </div>
             </div>
             <a
               href="#contact"
               className="bg-[#008C42] text-white px-6 py-3 rounded-full font-medium hover:bg-[#007538] transition-colors whitespace-nowrap"
             >
-              デモを見る
+              {t.howItWorks.demo.cta}
             </a>
           </div>
         </div>
