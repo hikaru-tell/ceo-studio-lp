@@ -26,10 +26,10 @@ export function Problem() {
     <section id="problem" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-indigo-600 font-medium text-sm uppercase tracking-wider">
+          <span className="text-[#008C42] font-medium text-sm uppercase tracking-wider">
             採用担当者の悩み
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-6">
             こんな課題を抱えていませんか？
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">

@@ -41,7 +41,7 @@ export function CTA() {
 
   if (isSubmitted) {
     return (
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-600 to-cyan-600">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#008C42] to-[#123B35]">
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-white rounded-3xl p-12 shadow-2xl">
             <div className="text-6xl mb-6">🎉</div>
@@ -64,7 +64,7 @@ export function CTA() {
                   message: "",
                 });
               }}
-              className="text-indigo-600 font-medium hover:underline"
+              className="text-[#008C42] font-medium hover:underline"
             >
               新しいお問い合わせを送る
             </button>
@@ -75,18 +75,18 @@ export function CTA() {
   }
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-600 to-cyan-600">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#008C42] to-[#123B35]">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-white">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-6">
               今すぐ始めて、
               <br />
               採用を変えましょう
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              CEO Studioで、候補者の心に響くスカウト体験を。
+              社長スタジオで、候補者の心に響くスカウト体験を。
               まずは無料でお試しください。
             </p>
 
@@ -133,7 +133,7 @@ export function CTA() {
                   required
                   value={formData.companyName}
                   onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#008C42] focus:border-transparent transition-all"
                   placeholder="株式会社〇〇"
                 />
               </div>
@@ -147,7 +147,7 @@ export function CTA() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#008C42] focus:border-transparent transition-all"
                   placeholder="山田 太郎"
                 />
               </div>
@@ -161,7 +161,7 @@ export function CTA() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#008C42] focus:border-transparent transition-all"
                   placeholder="example@company.com"
                 />
               </div>
@@ -174,7 +174,7 @@ export function CTA() {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#008C42] focus:border-transparent transition-all"
                   placeholder="03-1234-5678"
                 />
               </div>
@@ -187,7 +187,7 @@ export function CTA() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#008C42] focus:border-transparent transition-all resize-none"
                   placeholder="ご質問やご要望があればお書きください"
                 />
               </div>
@@ -201,7 +201,7 @@ export function CTA() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-indigo-600 text-white py-4 rounded-xl font-medium text-lg hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#008C42] text-white py-4 rounded-xl font-medium text-lg hover:bg-[#007538] transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#008C42]/20"
               >
                 {isSubmitting ? "送信中..." : "無料で相談する"}
               </button>

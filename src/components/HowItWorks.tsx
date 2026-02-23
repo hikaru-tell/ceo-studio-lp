@@ -34,10 +34,10 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-indigo-600 font-medium text-sm uppercase tracking-wider">
+          <span className="text-[#008C42] font-medium text-sm uppercase tracking-wider">
             使い方
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-6">
             4ステップで簡単スタート
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -47,7 +47,7 @@ export function HowItWorks() {
 
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-200 via-cyan-200 to-indigo-200 -translate-y-1/2 z-0"></div>
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#008C42]/20 via-[#123B35]/20 to-[#008C42]/20 -translate-y-1/2 z-0"></div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
@@ -55,7 +55,7 @@ export function HowItWorks() {
                 <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow">
                   {/* Step Number */}
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#008C42] to-[#123B35] rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">{step.number}</span>
                     </div>
                     <div className="text-4xl">{step.image}</div>
@@ -70,7 +70,7 @@ export function HowItWorks() {
                 {/* Arrow (hidden on last item) */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:flex absolute top-1/2 -right-4 -translate-y-1/2 z-20">
-                    <svg className="w-8 h-8 text-indigo-300" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 text-[#008C42]/30" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                     </svg>
                   </div>
@@ -82,19 +82,19 @@ export function HowItWorks() {
 
         {/* Demo CTA */}
         <div className="mt-16 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-gradient-to-r from-indigo-50 to-cyan-50 rounded-2xl p-6 sm:p-8">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-gradient-to-r from-[#008C42]/5 to-[#123B35]/5 rounded-2xl p-6 sm:p-8">
             <div className="text-4xl">🎥</div>
             <div className="text-center sm:text-left">
               <div className="font-bold text-slate-900 text-lg">
                 実際の動画を見てみませんか？
               </div>
               <div className="text-slate-600">
-                デモ動画でCEO Studioの実力をお確かめください
+                デモ動画で社長スタジオの実力をお確かめください
               </div>
             </div>
             <a
               href="#contact"
-              className="bg-indigo-600 text-white px-6 py-3 rounded-full font-medium hover:bg-indigo-700 transition-colors whitespace-nowrap"
+              className="bg-[#008C42] text-white px-6 py-3 rounded-full font-medium hover:bg-[#007538] transition-colors whitespace-nowrap"
             >
               デモを見る
             </a>
